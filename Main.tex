@@ -1,10 +1,19 @@
-\documentclass{article}
+\documentclass[]{article}
 
 \author{Leon Koster}
 \title{Cloud VR Thesis}
 \date{April 2020}
 
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
 
+\usepackage[
+backend=biber,
+style=apa,
+sorting=ynt
+]{biblatex}
+\usepackage{csquotes}
+\addbibresource{references.bib}
 
 \begin{document}
 
@@ -14,7 +23,6 @@
 \include{Abstract}
 
 \tableofcontents
-
 
 \include{FigureTableList}
 \include{AbbreviationsList}
@@ -31,7 +39,9 @@
 \include{Results}
 \include{Discussion}
 \include{Conclusion}
-\include{ReferenceList}
+
+\printbibliography
+
 \include{Appendices}
 
 \end{document}

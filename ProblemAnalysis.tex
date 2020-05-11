@@ -1,1 +1,55 @@
 \section{Problem Analysis}
+
+Together with the companies from the Industrial Reality Hub mentioned in the Introduction, Saxion wants to investigate how virtual reality
+can be rendered in the cloud in a safe and efficient manner. This involves looking at state-of-
+the art technology in the field of virtual reality, cloud computing, rendering and machine learning for one
+complete CloudVR pipeline. There are four research objectives here:
+
+\subsection{Architecture for a cloud system}
+One of the questions to be answered is what the CloudVR architecture should look like
+in terms of hardware and software. This not only concerns the servers, but also whether there are local ones
+rendering is required (see the next point). Figure 1 provides an overview of a possible CloudVR
+solution displayed.
+Figure 1: Example CloudVR architecture.
+
+\subsection{Latency}
+Current market players such as Google Stadia, GeForce Now and Xbox xCloud already offer cloud gaming
+services that stream games over the internet. Powerful servers are used for rendering
+games that are then streamed to users in real time. A bottleneck with this technology is the latency (delay). This is because user input is first sent to a server
+sent, renders these new images after which they are sent back to users, this
+all without disturbing the users.
+The mentioned platforms all use network optimization. It is low latency
+However, very important for VR which head movements under 20 milliseconds 4 should be
+converted to image to prevent motion sickness. The research is for this
+techniques for reducing latency are one of the spearheads of the CloudVR project.
+The following research directions are relevant here:
+\paragraph{Network optimization}
+As with the platforms described above, network optimization is one of the techniques
+which needs to be investigated. The question is to what extent an optimized network
+can reduce latency and how it relates to the quality of the network connection.
+\paragraph{Two-step rendering}
+One of the options to bypass latency is to render in two steps.
+The delay is not so much reduced, but avoided. The server renders next to
+RGB also positions and BRDF variables for each pixel. Afterwards, the
+user, on less powerful hardware, adjustments are made so that the image
+corresponds to the current position of the user.
+\paragraph{Behavioral prediction}
+Another possibility to reduce latency is by predicting
+user input through machine learning. This will mainly revolve around it
+analyzing head movements to find out what behavior can be expected. With
+this information can render any part of the virtual world before it
+is viewed by users. If this information is then forwarded from the
+cloud to the location of the VR experience, what information can be selected on the spot
+is displayed.
+
+\subsection{Multi-user experiences}
+One of the questions with a CloudVR solution is how to deal with multi-user VR experience where
+user at another location to share a VR experience via a network. The interaction with
+each other and the environment a point of attention.
+
+\subsection{GPU scaling}
+One of the advantages of cloud rendering is that in theory it gives the possibility of unlimited
+computing capacity. This gives the opportunity to all kinds of touristic feats
+(graphic), and interaction (physics). It is therefore interesting as part of the CloudVR pipeline
+to investigate how techniques such as NVLink and NVSwitch 5 could be used for
+high-quality VR experiences.
