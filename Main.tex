@@ -15,7 +15,7 @@ sorting=ynt
 ]{biblatex}
 \usepackage{csquotes}
 \usepackage{hyphenat}
-
+\input{Glossary}
 \addbibresource{references.bib}
 
 \begin{document}
@@ -29,7 +29,9 @@ sorting=ynt
 
 \include{FigureTableList}
 \include{AbbreviationsList}
-\include{Glossary}
+
+\printnoidxglossary[type=\acronymtype]
+
 \include{Introduction}
 \include{PreliminaryProblemStatement}
 \include{ProblemAnalysis}

@@ -11,7 +11,7 @@ in terms of hardware and software. This not only concerns the servers, but also 
 rendering is required (see the next point).
 
 \subsection{Latency}
-Current market players such as Google Stadia \parencite{stadia}, GeForce Now \parencite{geforcenow} and Xbox xCloud \parencite{xcloud} already offer cloud gaming services that stream games over the internet. Powerful servers are used for rendering games that are then streamed to users in real time. A bottleneck with this technology is the latency (delay). This is because user input is first sent to a server, which renders these new images, after which they are sent back to the users, all without disturbing them. The mentioned platforms all use network optimization. Low latency is very important for VR, where head movements should be converted to images in under 20 milliseconds, to prevent motion sickness. The research for techniques for reducing latency is one of the spearheads of the CloudVR project. The following research directions are relevant here:
+Current market players such as Google Stadia \parencite{stadia}, GeForce Now \parencite{geforcenow} and Xbox xCloud \parencite{xcloud} already offer cloud gaming services that stream games over the internet. Powerful servers are used for rendering games that are then streamed to users in real time. A bottleneck with this technology is the latency (delay). This is because user input is first sent to a server, which renders these new images, after which they are sent back to the users, all without disturbing them. The mentioned platforms all use network optimization. Low latency is very important for VR, where head movements should be converted to images in under 20 \acrfull{ms}, to prevent motion sickness. The research for techniques for reducing latency is one of the spearheads of the CloudVR project. The following research directions are relevant here:
 
 \paragraph{Network optimization}
 As with the platforms described above, network optimization is one of the techniques
@@ -20,7 +20,7 @@ can reduce latency and how it relates to the quality of the network connection.
 \paragraph{Two-step rendering}
 One of the options to bypass latency is to render in two steps.
 The delay is not so much reduced, but avoided. The server renders next to
-RGB also positions and BRDF variables for each pixel. Afterwards, the
+\acrshort{rgb} also positions and BRDF variables for each pixel. Afterwards, the
 user, on less powerful hardware, adjustments are made so that the image
 corresponds to the current position of the user.
 \paragraph{Behavioral prediction}
@@ -29,16 +29,16 @@ user input through machine learning. This will mainly revolve around it
 analyzing head movements to find out what behavior can be expected. With
 this information we can render any part of the virtual world before it
 is viewed by users. If this information is then forwarded from the
-cloud to the location of the VR experience, what information is displayed can be selected on the spot.
+cloud to the location of the \acrshort{vr} experience, what information is displayed can be selected on the spot.
 
 \subsection{Multi-user experiences}
-One of the questions with a CloudVR solution is how to deal with multi-user VR experience where
-users at another location share a VR experience via a network. The interaction with
+One of the questions with a CloudVR solution is how to deal with multi-user \acrshort{vr} experience where
+users at another location share a \acrshort{vr} experience via a network. The interaction with
 each other and the environment are a point of attention.
 
-\subsection{GPU scaling}
+\subsection{\acrshort{gpu} scaling}
 One of the advantages of cloud rendering is that in theory it gives the possibility of unlimited
 computing capacity. This gives the opportunity to all kinds of touristic feats
 (graphic), and interaction (physics). It is therefore interesting as part of the CloudVR pipeline
 to investigate how techniques such as NVLink and NVSwitch 5 could be used for
-high-quality VR experiences.
+high-quality \acrshort{vr} experiences.
