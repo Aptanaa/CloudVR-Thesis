@@ -10,16 +10,31 @@ According to Armbrust et al. (2010) Cloud computing is defined as follows:
 We can then further define Cloud streaming as the applications that are delivered over the internet as a service.
 
 \subsubsection{Existing Solutions and Technology}
-Several commercial gaming Cloud streaming services already exist, such as Google Stadia \parencite{stadia}, XBox XCloud \parencite{xcloud} and Nvidia GeForceNow \parencite{geforcenow}. The start of 2020 also saw the first experimental cloud \acrshort{vr} streaming development kits, such as Nvidia's CloudXR \parencite{cloudxr}. There is also a variety of Infrastructure\hyp{}as\hyp{}a\hyp{}service (IaaS) platforms, such as Amazon's AWS \parencite{aws}, Microsoft's Azure \parencite{azure} and Google's Cloud Platform \parencite{gcp}. For more information about these applications and technologies, please refer to the \hyperref[sec:lit]{Literature Analysis}.
+Several commercial gaming Cloud streaming services already exist, such as Google Stadia \parencite{stadia}, XBox XCloud \parencite{xcloud} and Nvidia GeForceNow \parencite{geforcenow}. These applications deliver conventional games from a powerful computer in a server to the client device at home. Despite initial setbacks, cloud streaming is now a mainstream technology. The start of 2020 also saw the first experimental cloud \acrshort{vr} streaming development kits, such as Nvidia's CloudXR \parencite{cloudxr}. However no commercial cloud VR streaming services exists. at the time of writing. There is also a variety of Infrastructure\hyp{}as\hyp{}a\hyp{}service (IaaS) platforms, such as Amazon's AWS \parencite{aws}, Microsoft's Azure \parencite{azure} and Google's Cloud Platform \parencite{gcp}, that provide generic computing power and storage in a cloud computing/streaming context. For more information about these applications and technologies, please refer to the \hyperref[sec:lit]{Literature Analysis}.
 
 \subsubsection{System Architecture (for a cloud system)}
+\begin{figure}[h]
+\caption{Cloud Server, Remote Edge, Local Edge visualized}
+\label{fig:arch1}
+\includegraphics[scale=0.45]{Architectures1}
+\end{figure}
 
 \begin{figure}[h]
 \caption{Example System Architecture}
+\label{fig:sysarch}
 \includegraphics[scale=0.45]{SimpleArchitecture}
 \end{figure}
 
+One of the main considerations when designing a cloud \acrshort{vr} streaming application is the decision to either use a Cloud, Remote Edge or Local Edge computing device for the rendering of the frames (See \hyperref[fig:arch1]{Figure 1} and \cite{wlanvr}):
+\begin{itemize}
+\item A cloud server renders the \acrfull{fov} (current view) remotely and streams the corresponding video to the user’s \acrfull{hmd}. 
+\item A Remote Edge sever recieves multiple views that are rendered remotely on cloud servers, stitches them together to a 360-degree video, and streams the video to the user’s \acrshort{hmd}
+\item A Local Edge server recieves compressed models as well as textures, renders it locally and streams the video to the user’s \acrshort{hmd}.
+\end{itemize} 
+
+Since this project is focused on a cloud streaming, we will disregard the local edge approach an instead focus on solutions that use a cloud server or remote edge server for rendering. An example architecture of such a solution can be seen in \hyperref[fig:sysarch]{Figure 2}.
 \subsubsection{Latency}
+The most important metric for a system architecture is the latency between the user input, such as movement of the \acrshort{hmd}, and the updated frame appearing on the users display. Recent measurements of  cloud gaming services measure this latency at between 135 and 240 \acrshort{ms} \parencite{lagmeasure}.
 
 \subsection{Virtual Reality}
 
