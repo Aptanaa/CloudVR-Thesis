@@ -12,14 +12,16 @@ We can then further define Cloud streaming as the applications that are delivere
 \subsubsection{Existing Solutions and Technology}
 Several commercial gaming Cloud streaming services already exist, such as Google Stadia \parencite{stadia}, XBox XCloud \parencite{xcloud} and Nvidia GeForceNow \parencite{geforcenow}. There is also a variety of Infrastructure\hyp{}as\hyp{}a\hyp{}service (IaaS) platforms, such as Amazon's AWS \parencite{aws}, Microsoft's Azure \parencite{azure} and Google's Cloud Platform \parencite{gcp}. For more information about these applications and technologies, please refer to the \hyperref[sec:lit]{Literature Analysis}.
 
-\subsection{System Architecture (for a cloud system)}
+\subsubsection{System Architecture (for a cloud system)}
 
-\subsubsection{Definition}
 
-\subsubsection{Important considerations}
+\subsubsection{Latency}
 
 \subsection{Virtual Reality}
 
 \subsubsection{Definition}
 Early works, such as the 1996 article "Virtual Reality in Scientific Visualizations"  or the 2003 book "Virtual Reality Technology", define Virtual Reality as: "The use of computers and human\hyp{}computer interfaces to create the effect of a three\hyp{}dimensional world containing interactive objects with a strong sense of three\hyp{}dimensional presence."\parencite{vrsv} or "A Simulation in which computer graphics is used to create a realistic looking world. Moreover, the synthetic world is not static, but responds to the users input. This defines a key feature of Virtual Reality, \textit{real\hyp{}time interactivity}" \parencite{vrtech}.
-\subsubsection{Latency Constraints}
+
+\subsubsection{Physical Constraints}
+
+As mentioned before, when developing a \acrshort{vr} application, there are a few physical constraints that developers need to be aware of. The most important threshold to know is the 20 \acrshort{ms} \acrfull{mtp} delay. Upon input from the \acrfull{hmd}, the developer has to display a new rendered image within an average of 20 \acrshort{ms} to avoid motion sickness for users. The more this threshold can be undercut, the better the chances to have an acceptable gameplay experience without motion sickness. Interaction input, such as the input from the controllers, can safely be processed at delays of $>$100 \acrshort{ms} without any negative repercussions in terms of \acrfull{ux}. For more information, please refer to the \hyperref[sec:lit]{Literature Analysis}.
