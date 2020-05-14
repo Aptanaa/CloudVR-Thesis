@@ -20,9 +20,9 @@ can reduce latency and how it relates to the quality of the network connection.
 \paragraph{Two-step rendering}
 One of the options to bypass latency is to render in two steps.
 The delay is not so much reduced, but avoided. The server renders next to
-\acrshort{rgb} also positions and BRDF variables for each pixel. Afterwards, the
-user, on less powerful hardware, adjustments are made so that the image
-corresponds to the current position of the user.
+\acrshort{rgb} also positions and BRDF variables for each pixel. Afterwards on the
+user's (less powerful) hardware adjustments are made so that the image corresponds to the current position of the user.
+By sending additional data, the user's local client can extrapolate the correct information and construct a frame that represents the correct head position in the last frame, meanwhile it is waiting for the  correct next frame from the server.
 \paragraph{Behavioral prediction}
 Another possibility to reduce latency is by predicting
 user input through machine learning. This will mainly revolve around it
@@ -36,9 +36,9 @@ One of the questions with a CloudVR solution is how to deal with multi-user \acr
 users at another location share a \acrshort{vr} experience via a network. The interaction with
 each other and the environment are a point of attention.
 
-\subsection{\acrshort{gpu} scaling}
+\subsection{GPU scaling}
 One of the advantages of cloud rendering is that in theory it gives the possibility of unlimited
 computing capacity. This gives the opportunity to all kinds of touristic feats
 (graphic), and interaction (physics). It is therefore interesting as part of the CloudVR pipeline
-to investigate how techniques such as NVLink and NVSwitch 5 could be used for
+to investigate how techniques such as NVLink and NVSwitch 5 \parencite{nvlink} could be used for
 high-quality \acrshort{vr} experiences.
