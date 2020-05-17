@@ -24,15 +24,20 @@ sorting=ynt
 
 \begin{document}
 \include{Title}
-\include{Acknowledgements}
-\include{Abstract}
 
+\input{Acknowledgements}
+\input{Abstract}
+
+\newpage
 \tableofcontents
 
-\include{FigureTableList}
-\include{AbbreviationsList}
-\include{Introduction}
-\include{PreliminaryProblemStatement}
+\newpage
+\input{FigureTableList}
+\input{AbbreviationsList}
+
+\newpage
+\input{Introduction}
+\input{PreliminaryProblemStatement}
 \include{ProblemAnalysis}
 \include{TheoreticalFramework}
 \include{LiteratureReview}
