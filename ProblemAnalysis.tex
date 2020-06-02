@@ -3,7 +3,7 @@
 Together with the companies from the Industrial Reality Hub mentioned in the Introduction, Saxion wants to investigate how virtual reality
 can be rendered in the cloud in a safe and efficient manner. This involves looking at state-of-
 the art technology in the field of virtual reality, cloud computing, rendering and machine learning for one
-complete CloudVR pipeline. There are four research objectives here:
+complete CloudVR pipeline. There are a multiple research directions in the overarching project (Multi-User Experiences, GPU Scaling, etc), however this report will focus on the following:
 
 \subsection{Architecture for a cloud VR system}
 One of the questions to be answered is what the CloudVR architecture should look like
@@ -31,14 +31,5 @@ this information we can render any part of the virtual world before it
 is viewed by users. If this information is then forwarded from the
 cloud to the location of the \acrshort{vr} experience, what information is displayed can be selected on the spot.
 
-\subsection{Multi-user experiences}
-One of the questions with a CloudVR solution is how to deal with multi-user \acrshort{vr} experience where
-users at another location share a \acrshort{vr} experience via a network. The interaction with
-each other and the environment are a point of attention.
-
-\subsection{GPU scaling}
-One of the advantages of cloud rendering is that in theory it gives the possibility of unlimited
-computing capacity. This gives the opportunity to all kinds of touristic feats
-(graphic), and interaction (physics). It is therefore interesting as part of the CloudVR pipeline
-to investigate how techniques such as NVLink and NVSwitch 5 \parencite{nvlink} could be used for
-high-quality \acrshort{vr} experiences.
+\subsection{Security}
+If an application contains sensitive data, it is advisable to keep the data in a secure location. Previously this was impossible with VR applications, due to their high demand for computing power which meant that VR applications could only be run on a powerful, local computer. In a cloud \acrshort{vr} setup the sensitive data would remain on the (secure) server and only the results will be streamed to the local (unsecured) device, preventing unauthorized access. Researching how to maximise security for the clients data is the secondary major focus of this report.
