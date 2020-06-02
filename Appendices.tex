@@ -1,154 +1,40 @@
 \section{Appendices}
-\subsection{Technology/Services SWOT Analysis}
+\subsection{Cloud Computing SWOT Analysis}
 
-\subsubsection{Amazon - AWS}
-\begin{tikzpicture}[
-    any/.style={draw,minimum width=6cm,minimum height=6cm,%
-                 text width=3.5cm,align=center,outer sep=0pt},
-    header/.style={any,minimum height=1cm,fill=black!10},
-    leftcol/.style={header,rotate=90}
-]
+\subsubsection{Cloud services}
 
-\matrix (SWOT) [matrix of nodes,nodes={any,anchor=center},%
-                column sep=-\pgflinewidth,%
-                row sep=-\pgflinewidth,%
-                row 1/.style={nodes=header},%
-                column 1/.style={nodes=leftcol},
-                inner sep=0pt]
-{
-          & {\texta} & {\textb} \\
-{\textcn} & \textbf{Strengths}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
- 	& \textbf{Weakness}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
-	\\
-{\textdn} 
-	& \textbf{Opportunities}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
-	& \textbf{Threats}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
-	\\
-};
-\end{tikzpicture}
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+\begin{tabular}{ | p{0.5\linewidth} | p{0.5\linewidth} | } 
+ \hline
+ \textbf{Strengths} & \textbf{Weaknesses}\\ 
+\hline
+ \textit{Scalability}: Using a cloud service enables effortless scaling & \textit{Service Outages}: They do not happen often, but when they happen they are out of the customers control \\ 
+\textit{Lower Costs}: Paying only for what the customer uses and not having to worry about maintenance drives down costs & \textit{Longer Upload/Download times}:  Compared to an in-house server it will take longer to move large files, as the internet speed is the limiting factor\\
+\textit{Lower Capital Expense}: Since the customer is not the one buying the hardware & \\ 
+ \textit{Global Connectivity}: Cloud service providers have a global network of servers and thus the customer can offer his clients a fast connection to a local server & \\
+ \hline
+ \textbf{Opportunities} & \textbf{Threats}  \\ 
+ \hline
+\textit{Technological Advancements}: A cloud service provider will always seek to have the best technology to offset themselves from competition, which benefits the customer & \textit{Termination of Service}: It seems very unlikely, but in theory the service provider could go out of business/terminate the service and thus disrupt the business \\
+\hline 
+\end{tabular}
+\end{center}
 
-\subsubsection{Microsoft - Azure}
-\begin{tikzpicture}[
-    any/.style={draw,minimum width=6cm,minimum height=6cm,%
-                 text width=3.5cm,align=center,outer sep=0pt},
-    header/.style={any,minimum height=1cm,fill=black!10},
-    leftcol/.style={header,rotate=90}
-]
+\subsubsection{In-House Server}
 
-\matrix (SWOT) [matrix of nodes,nodes={any,anchor=center},%
-                column sep=-\pgflinewidth,%
-                row sep=-\pgflinewidth,%
-                row 1/.style={nodes=header},%
-                column 1/.style={nodes=leftcol},
-                inner sep=0pt]
-{
-          & {\texta} & {\textb} \\
-{\textcn} & \textbf{Strengths}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
- 	& \textbf{Weakness}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
-	\\
-{\textdn} 
-	& \textbf{Opportunities}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
-	& \textbf{Threats}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
-	\\
-};
-\end{tikzpicture}
-
-\subsubsection{Google - GCloud}
-\begin{tikzpicture}[
-    any/.style={draw,minimum width=6cm,minimum height=6cm,%
-                 text width=3.5cm,align=center,outer sep=0pt},
-    header/.style={any,minimum height=1cm,fill=black!10},
-    leftcol/.style={header,rotate=90}
-]
-
-\matrix (SWOT) [matrix of nodes,nodes={any,anchor=center},%
-                column sep=-\pgflinewidth,%
-                row sep=-\pgflinewidth,%
-                row 1/.style={nodes=header},%
-                column 1/.style={nodes=leftcol},
-                inner sep=0pt]
-{
-          & {\texta} & {\textb} \\
-{\textcn} & \textbf{Strengths}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
- 	& \textbf{Weakness}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
-	\\
-{\textdn} 
-	& \textbf{Opportunities}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
-	& \textbf{Threats}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
-	\\
-};
-\end{tikzpicture}
-
-\subsubsection{NVIDIA - CloudXR}
-\begin{tikzpicture}[
-    any/.style={draw,minimum width=6cm,minimum height=6cm,%
-                 text width=3.5cm,align=center,outer sep=0pt},
-    header/.style={any,minimum height=1cm,fill=black!10},
-    leftcol/.style={header,rotate=90}
-]
-
-\matrix (SWOT) [matrix of nodes,nodes={any,anchor=center},%
-                column sep=-\pgflinewidth,%
-                row sep=-\pgflinewidth,%
-                row 1/.style={nodes=header},%
-                column 1/.style={nodes=leftcol},
-                inner sep=0pt]
-{
-          & {\texta} & {\textb} \\
-{\textcn} & \textbf{Strengths}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
- 	& \textbf{Weakness}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
-	\\
-{\textdn} 
-	& \textbf{Opportunities}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
-	& \textbf{Threats}
-		\begin{itemize}
-			\item{A Point}
-		\end{itemize}
-	\\
-};
-\end{tikzpicture}
+\begin{center}
+\begin{tabular}{ | p{0.5\linewidth} | p{0.5\linewidth} | } 
+ \hline
+ \textbf{Strengths} & \textbf{Weaknesses}\\ 
+\hline
+ \textit{Total Control}: If the customer owns and operates the server, they have complete control over it. They can adjust the server to specifically fit their requirements and thus optimizing performance & \textit{Increased complexity/costs}: Operating a server infrastructure requires experts to administrate and maintain \\ 
+\textit{Faster development/response time}: An in-house server is local by nature and thus modifying/fixing things on the server is faster compared to external servers & \textit{Higher Capital Expense}: Since the customer has to buy all the necessary hardware for an in-house server, the upfront investment is higher \\
+\textit{Well understood} It is easier for developers to become familiar with and develop in-depth knowledge in a server infrastructure they can easily interact with & \textit{Physical Requirements}: Building an in-house server infrastructure requires not only sufficient physical space, but also auxiliary systems such as cooling, (emergency-) electricity and cabling \\
+ \hline
+ \textbf{Opportunities} & \textbf{Threats}  \\ 
+ \hline
+\textit{TBD}: & \textit{Obsolescence}: As the owner, the customer would be responsible to upgrade the system if they want/need new features. This of course comes with more costs \\
+\hline 
+\end{tabular}
+\end{center}
