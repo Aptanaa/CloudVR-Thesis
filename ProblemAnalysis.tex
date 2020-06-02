@@ -5,11 +5,6 @@ can be rendered in the cloud in a safe and efficient manner. This involves looki
 the art technology in the field of virtual reality, cloud computing, rendering and machine learning for one
 complete CloudVR pipeline. There are a multiple research directions in the overarching project (Multi-User Experiences, GPU Scaling, etc), however this report will focus on the following:
 
-\subsection{Architecture for a cloud VR system}
-One of the questions to be answered is what the CloudVR architecture should look like
-in terms of hardware and software. This not only concerns the servers, but also whether there are local ones
-rendering is required (see the next point).
-
 \subsection{Latency}
 Current market players such as Google Stadia \parencite{stadia}, GeForce Now \parencite{geforcenow} and Xbox xCloud \parencite{xcloud} already offer cloud gaming services that stream games over the internet. Powerful servers are used for rendering games that are then streamed to users in real time. A bottleneck with this technology is the latency (delay). This is because user input is first sent to a server, which renders these new images, after which they are sent back to the users, all without disturbing them. The mentioned platforms all use network optimization. Low latency is very important for VR, where head movements should be converted to images in under 20 \acrfull{ms}, to prevent motion sickness \parencite{valvevrlatency}. The research for techniques for reducing latency is one of the spearheads of the CloudVR project. The following research directions are relevant here:
 
@@ -33,3 +28,8 @@ cloud to the location of the \acrshort{vr} experience, what information is displ
 
 \subsection{Security}
 If an application contains sensitive data, it is advisable to keep the data in a secure location. Previously this was impossible with VR applications, due to their high demand for computing power which meant that VR applications could only be run on a powerful, local computer. In a cloud \acrshort{vr} setup the sensitive data would remain on the (secure) server and only the results will be streamed to the local (unsecured) device, preventing unauthorized access. Researching how to maximise security for the clients data is the secondary major focus of this report.
+
+\subsection{Architecture for a cloud VR system}
+One of the questions to be answered is what the CloudVR architecture should look like
+in terms of hardware and software. This not only concerns the servers, but also whether there are local ones
+rendering is required (see the next point).
