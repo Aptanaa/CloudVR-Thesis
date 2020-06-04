@@ -1,0 +1,11 @@
+Cloud service providers vs. In-House server?
+
+What do they want to use CloudVR for?
+
+Do they have technology that could be useful for me?
+
+Did they already do research on their own? Do they know of any pitfalls?
+
+How far would the distances between server and end device would be?
+
+
