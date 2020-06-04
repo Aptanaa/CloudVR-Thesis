@@ -1,0 +1,88 @@
+\documentclass[]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage[
+backend=biber,
+style=apa,
+citestyle=apa,
+sorting=ynt
+]{biblatex}
+\usepackage{csquotes}
+\usepackage{hyphenat}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\input{Glossary}
+\addbibresource{references.bib}
+
+\begin{document}
+
+\begin{titlepage}
+   \begin{center}
+       \vspace*{1cm}
+
+       \textbf{Final Implementation Plan}
+
+       \vspace{0.5cm}
+       Cloud VR. Secure, Fast and Distributed Virtual Reality Solutions.
+       \vspace{1.5cm}
+
+       \textbf{Leon Koster}
+
+       \vfill
+            
+       \vspace{0.8cm}
+     
+      \includegraphics[width=0.5\textwidth]{university}
+            
+       Academie Creative Technology (ACT)\\
+       Saxion University of Applied Sciences\\
+       Netherlands\\
+       May 2020
+            
+   \end{center}
+\end{titlepage}
+
+\tableofcontents
+\printnoidxglossary[type=\acronymtype]
+
+\input{Introduction}
+\section{Reason for Assignment}
+\subsection{Graduation Assignment}
+The assignment for this graduation is to analyse the current state of cloud \acrshort{vr} streaming. This includes existing commercial services, open source libraries/frameworks, relevant research papers and experimental technologies. The 4 research directions for this project are system architecture for a cloud \acrshort{vr} system, Latency, Multi-User Experiences and \acrshort{gpu} Scaling. This paper will focus on researching the system architecture and latency improvements. These findings will be presented in the form of a theoretical framework and a literature review.
+
+Armed with the information from the initial part of the research, the student and the stakeholders will agree on a suitable research focus for the reminder of the projec, including a proof of concept focused on reducing latency.
+\subsection{Client outline}
+The stakeholders in this project are the student (Leon Koster), Saxion's XR Lab (Matthijs van Veen, Yiwei Jiang) and the \acrfull{irh}.
+\section{Objectives of the client}
+Together with the companies from the Industrial Reality Hub mentioned in the Client outline, Saxion wants to investigate how virtual reality can be rendered in the cloud in a safe and efficient manner. This involves looking at state-of-the art technology in the field of virtual reality, cloud computing, rendering and machine learning for one complete Cloud\acrshort{vr} pipeline. 
+
+In the bigger picture this project is a multi phase project, with this project being the initial phase. It aims to give an overview of the current situation regarding cloud \acrshort{vr} streaming and focus on system architecture and latency optimization. These informations will subsequently be utilized in the later stages of the over arching research project.
+
+\include{PreliminaryProblemStatement}
+\include{TheoreticalFramework}
+\include{FinalProblemStatement}
+\include{ResearchQuestions}
+
+\section{Approach}
+
+\section{Scope}
+
+\section{Graduation Schedule}
+I was asked to give an overview of the time line for this project. These times are from the graduation manual, translated to the time frame of my graduation project. 
+\paragraph{Start of Project}
+The project started on the 4th May 2020.
+\paragraph{Preliminary Implementation Plan}
+To be handed in at the end of week 2: 17th May 2020 23:59
+\paragraph{Final Implementation Plan}
+To be handed in at the end of week 5: $\sim$31st May 2020 23:59
+\paragraph{Graduation Report Draft}
+To be handed in at the end of week 10: $\sim$12th July 2020 23:59
+\paragraph{Final Graduation Report}
+To be handed in at the end of week 16: $\sim$23rd August 2020 23:59
+
+\printbibliography
+\end{document}
