@@ -1,11 +1,17 @@
 Cloud service providers vs. In-House server?
+Could be possible to do local cloud (not preferred solution). Cloud Providers are good (Microsoft Azure (they wanted to be the defense cloud in America and won in Europe) and is located in Amsterdam). Have to verify user. Azure kinda got the security covered. Alternatively Previder: https://www.previder.com/
 
 What do they want to use CloudVR for?
+It is easy to service (just upload in the cloud). GPU scaling. One powerful computer to service multiple HMD. Security (cant really secure an executable, models loaded into GPU, could get access to CAD model). Pay per use VR as a Service.
 
 Do they have technology that could be useful for me?
+Not really.
 
 Did they already do research on their own? Do they know of any pitfalls?
+Not really.
 
 How far would the distances between server and end device would be?
+Server would be in Amsterdam. I am allowed to spin up geo-local servers.
 
-
+Are you interested that I keep you up to date ? Are you interested to check out the prototype when it is in MVP state? 
+Yes keep him up to date and invite him for the MVP?
