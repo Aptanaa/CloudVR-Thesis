@@ -55,6 +55,7 @@ To encrypt the data in delivery, a technology such as the \acrfull{tls} can be u
 An \acrshort{iam} solution tracks users and what they are allowed to do. There are multiple existing solutions for tracking the users privileges, but for this report only cloud based services are relevant since the premise of this research is the ability to have a cloud solution. All major cloud providers have \acrshort{iam} solutions in their ecosystem and in case of a in-house server a independent \acrshort{iam} service provider can satisfy that requirement.
 
 \subsection{Components of a cloud \acrshort{vr} pipeline}
+After establishing the needed knowledge about the context, in this section all the individual components of a cloud \acrshort{vr} pipeline are being presented. Furthermore an overview of pre-made components will be presented and which part of the pipeline they address.
 
 \begin{figure}[h]
 \caption{Overview of components in a typical cloud \acrshort{vr} pipeline}
@@ -77,10 +78,12 @@ Once decrypted to usable packages, the data will be decoded and then sent to the
 \paragraph{\textCRD}
 The decoded frames will be warped to fit the lenses of the \acrshort{hmd} and then finally be displayed to the user.
 
+
 \subsubsection{Available components}
 \renewcommand{\arraystretch}{1.5}
-\begin{center}
-\begin{tabular}{  | p{0.15\linewidth} | p{0.5\linewidth} | p{0.35\linewidth} | } 
+\begin{table}[h]
+\caption{Available Components}
+\begin{tabular}{  | p{0.15\linewidth} | p{0.5\linewidth} | p{0.35\linewidth} | }
 \hline
 \textbf{Name} & \textbf{Description} & \textbf{Solves} \\ 
 \hline
@@ -99,4 +102,4 @@ WebRTC & With WebRTC, you can add real-time communication capabilities to your a
 \acrshort{aws} Wavelength & AWS Wavelength enables developers to build applications that deliver single-digit millisecond latencies to mobile devices and end-users \parencite{awswavelength}. & \textN \\
 \hline
 \end{tabular}
-\end{center}
+\end{table}
