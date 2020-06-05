@@ -53,3 +53,50 @@ One such encryption technologies is the \acrfull{aes}, which comes with three di
 To encrypt the data in delivery, a technology such as the \acrfull{tls} can be used, which encrypts the data based on a shared secret that was negotiated at the start of the session, thus making the data only usable for the server and client who have the decryption key.
 \subsubsection{\acrfull{iam}}
 An \acrshort{iam} solution tracks users and what they are allowed to do. There are multiple existing solutions for tracking the users privileges, but for this report only cloud based services are relevant since the premise of this research is the ability to have a cloud solution. All major cloud providers have \acrshort{iam} solutions in their ecosystem and in case of a in-house server a independent \acrshort{iam} service provider can satisfy that requirement.
+
+\subsection{Components of a cloud \acrshort{vr} pipeline}
+
+\begin{figure}[h]
+\caption{Overview of components in a typical cloud \acrshort{vr} pipeline}
+\label{fig:pipeline}
+\includegraphics[scale=0.5]{CloudVR_PipelineComponents}
+\end{figure}
+
+\paragraph{\textSR}
+The actual \acrshort{vr} application will be running on the cloud server and use the servers hardware to render the game. The application will be running on the OpenVR SDK, which allows access to VR hardware from multiple vendors without requiring that applications have specific knowledge of the hardware they are targeting \parencite{openvrsdk}. 
+\paragraph{\textSECO}
+The rendered frames will be encoded with a video compression codec before they are sent to the networking layer.
+\paragraph{\textSECR}
+Before transmitting the data (encoded frames) over the network it will be encrypted to maximise security.
+\paragraph{\textN}
+Through the network connection both the output (rendered, encoded and encrypted frames) and the input (\acrshort{hmd} position and controller input) will be exchanged between the server and the client.
+\paragraph{\textCDCR}
+Once received from the networking layer, the frames are decrypted to prepare for decoding.
+\paragraph{\textCDCO}
+Once decrypted to usable packages, the data will be decoded and then sent to the VR Runtime
+\paragraph{\textCRD}
+The decoded frames will be warped to fit the lenses of the \acrshort{hmd} and then finally be displayed to the user.
+
+\subsubsection{Available components}
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+\begin{tabular}{  | p{0.15\linewidth} | p{0.5\linewidth} | p{0.35\linewidth} | } 
+\hline
+\textbf{Name} & \textbf{Description} & \textbf{Solves} \\ 
+\hline
+NVIDIA CloudXR SDK & NVIDIA CloudXR™, a groundbreaking technology built on NVIDIA RTX™, delivers VR and AR across 5G and Wi-Fi networks. With NVIDIA GPU virtualization software, CloudXR is fully scalable for data center and edge networks \parencite{cloudxr}. & \textSECO , \textSECR ,  \textN , \textCDCR , \textCDCO , \textCRD \\
+\hline
+Seurat & Seurat is a system for image-based scene simplification for VR. It converts complex 3D scenes with millions of triangles, including complex lighting and shading effects, into just tens of thousands of triangles that can be rendered very efficiently on 6DOF devices with little loss in visual quality \parencite{seurat}. & \textSR  \\
+\hline
+H.265 & High Efficient Video Coding is a video compression standard. In comparison to previous compression standards it offers from 25\% to 50\% better data compression at the same level of video quality. & \textSECO , \textCDCO \\
+\hline
+\acrfull{aes}  & \acrshort{aes} is a specification for the encryption of electronic data. & \textSECR \\
+\hline
+\acrfull{tls} & \acrshort{tls} is a cryptographic protocol designed to provide communications security over a computer network by utilizing the \acrshort{aes} technology. & \textSECR , \textN \\
+\hline
+WebRTC & With WebRTC, you can add real-time communication capabilities to your application that works on top of an open standard. It supports video, voice, and generic data to be sent between peers, allowing developers to build powerful voice- and video-communication solutions. The technology is available on all modern browsers as well as on native clients for all major platforms \parencite{webRTC}. & \textN \\
+\hline
+\acrshort{aws} Wavelength & AWS Wavelength enables developers to build applications that deliver single-digit millisecond latencies to mobile devices and end-users \parencite{awswavelength}. & \textN \\
+\hline
+\end{tabular}
+\end{center}
