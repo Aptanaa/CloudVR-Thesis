@@ -1,0 +1,39 @@
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+
+%For References and quotes
+\usepackage[
+backend=biber,
+style=apa,
+citestyle=apa,
+sorting=nyt
+]{biblatex}
+\usepackage{csquotes}
+\usepackage{hyphenat}
+
+%For Links
+\usepackage{hyperref}
+
+%For Images
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+%For Swot Analysis Matrixes
+\usepackage{times}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+
+%For TheoreticalFramework
+\usepackage{varwidth}
+\usepackage{longtable}
+\newcommand{\textSR}{Server-side rendering}
+\newcommand{\textSECO}{Server-side encoding}
+\newcommand{\textSECR}{Server-side encrypting}
+\newcommand{\textN}{Networking}
+\newcommand{\textCDCO}{Client-side decoding}
+\newcommand{\textCDCR}{Client-side decrypting}
+\newcommand{\textCRD}{Client-side rendering/displaying}
+
+\input{Glossary}
+\addbibresource{references.bib}
