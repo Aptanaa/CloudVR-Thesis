@@ -1,0 +1,3 @@
+Does Azure have NVIDIA VR Ready GPU's (RTX, Quadro) ?
+
+What security features does Azure provide out-of-the box ?
