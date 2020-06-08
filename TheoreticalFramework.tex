@@ -103,6 +103,8 @@ VP8 & VP8 is an open and royalty free video compression format.  & \textSECO , \
 \hline
 WebRTC & With WebRTC, you can add real-time communication capabilities to your application that works on top of an open standard. It supports video, voice, and generic data to be sent between peers, allowing developers to build powerful voice- and video-communication solutions. The technology is available on all modern browsers as well as on native clients for all major platforms \parencite{webRTC}. & \textN \\
 \hline
+WebXR & The WebXR Device API provides the interfaces necessary to enable developers to build compelling, comfortable, and safe immersive applications on the web across a wide variety of hardware form factors. & \textSR , \textCRD \\
+\hline
 \end{longtable}
 
 \subsection{Proposed Technology Stacks}
@@ -132,8 +134,8 @@ The CloudXR SDK from NVIDIA offers a complete solution package to stream VR/AR e
 \end{itemize}
 \end{varwidth}
 
-\subsubsection{WebRTC + High Performance Video Codec}
-WebRTC is one of the premier web technologies to enable real time communications. Since it allows for streaming video and generic data it is a good candidate to create a cloud \acrshort{vr} streaming prototype, because it can transfer both the video and input data. As it has a focus on real time communication it is optimized to reduce latency by default, however it is unclear if this is enough optimization by itself to support streaming \acrshort{vr} content. \\
+\subsubsection{WebRTC + WebXR + High Performance Video Codec}
+WebRTC is one of the premier web technologies to enable real time communications. Since it allows for streaming video and generic data it is a good candidate to create a cloud \acrshort{vr} streaming prototype, because it can transfer both the video and input data. As it has a focus on real time communication it is optimized to reduce latency by default, however it is unclear if this is enough optimization by itself to support streaming \acrshort{vr} content. To enable the application to run "normally" WebXR will be used to provide an interface of the physical hardware on the removed remote server. \\
 \newline
 \begin{varwidth}[t]{.5\textwidth}
 \renewcommand\labelitemi{+}
@@ -143,7 +145,7 @@ WebRTC is one of the premier web technologies to enable real time communications
 \item Mature technology
 \item Well documented and supported
 \item Platform independent
-\item Developed by the same companies that offer cloud computing services (improved integration ?)
+\item WebRTC is developed by the same companies that offer cloud computing services (improved integration ?)
 \end{itemize}
 \end{varwidth}
 \hspace{4em}
@@ -151,8 +153,8 @@ WebRTC is one of the premier web technologies to enable real time communications
 \renewcommand\labelitemi{-}
 \textbf{Cons:}
 \begin{itemize}
-\item Generalized solution (it will  take more work to optimize it for \acrshort{vr})
-\item Lower performance Web Technology (but there are native clients for all major platforms available)
+\item WebRTC is a generalized solution (it will take more work to optimize it for \acrshort{vr})
+\item Lower performance Web Technologies (but there are native clients for all major platforms available)
 \item Higher complexity (might run out of time while trying to create the prototype)
 \end{itemize}
 \end{varwidth}
