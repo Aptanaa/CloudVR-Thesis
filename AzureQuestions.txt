@@ -1,3 +1,7 @@
 Does Azure have NVIDIA VR Ready GPU's (RTX, Quadro) ?
 
 What security features does Azure provide out-of-the box ?
+
+Does Azure have geo-spatial servers (so that a server close to the customer can be used)?
+
+What is the easiest way to get WebRTC/ICE/STUN/TURN to work on Azure?
