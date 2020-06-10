@@ -41,15 +41,15 @@
 \subsection{Graduation Assignment}
 The assignment for this graduation is to analyse the current state of cloud \acrshort{vr} streaming. This includes existing commercial services, open source libraries/frameworks, relevant research papers and experimental technologies. The 4 research directions for this project are system architecture for a cloud \acrshort{vr} system, Latency, Multi-User Experiences and \acrshort{gpu} Scaling. This paper will focus on researching the system architecture and latency improvements. These findings will be presented in the form of a theoretical framework and a literature review.
 
-Armed with the information from the initial part of the research, the student and the stakeholders will agree on a suitable research focus for the reminder of the projec, including a proof of concept focused on reducing latency.
+Armed with the information from the initial part of the research, the student and the stakeholders will agree on a suitable research focus for the remainder of the project, including a proof of concept focused on reducing latency.
 \subsection{Client outline}
-The stakeholders in this project are the student (Leon Koster), Saxion's XR Lab (Matthijs van Veen, Yiwei Jiang) and the \acrfull{irh}.
+The stakeholders in this project are the student (Leon Koster), Saxion's XR Lab (Matthijs van Veen) and the \hyperref[sec:int]{Industrial Reality Hub}.
 
 \newpage
-\section{Objectives of the client}
+\section{Problem Analysis}
 Together with the companies from the Industrial Reality Hub mentioned in the Client outline, Saxion wants to investigate how virtual reality can be rendered in the cloud in a safe and efficient manner. This involves looking at state-of-the art technology in the field of virtual reality, cloud computing, rendering and machine learning for one complete Cloud\acrshort{vr} pipeline. 
 
-In the bigger picture this project is a multi phase project, with this project being the initial phase. It aims to give an overview of the current situation regarding cloud \acrshort{vr} streaming and focus on system architecture and latency optimization. These informations will subsequently be utilized in the later stages of the over arching research project.
+In the bigger picture this project is a multi phase project, with this research being the initial phase. It aims to give an overview of the current situation regarding cloud \acrshort{vr} streaming and focus on system architecture and latency optimization. These informations will subsequently be utilized in the later stages of the over arching research project.
 
 \include{PreliminaryProblemStatement}
 \include{TheoreticalFramework}
@@ -59,7 +59,7 @@ In the bigger picture this project is a multi phase project, with this project b
 \section{Approach}
 To answer the research questions, I will create a prototype cloud \acrshort{vr} system. I aim to include as many pre-existing solutions as possible in order to accelerate the prototyping speed. Initially I want to design and implement a Minimal Viable Product with components I understand. If time allows I plan to create more prototypes with different technologies, in order to be able to compare the effectiveness of different solutions when applied to the research problem.
 
-As I outlined earlier, the main focus for this report is on latency reduction and security. To compare solutions and understand their effectiveness I will measure \acrfull{mtp} latency as the primary benchmark. It is harder to measure security, but by understanding what the state-of-the-art security practices are and implementing them to the best of my ability, I aim to create a solution that keeps the clients data safe.
+As I outlined earlier, the main focus for this report is on latency reduction and security. To compare solutions I will measure \acrfull{mtp} latency as the primary benchmark. These measurements will then be compared to a "traditional" local \acrshort{vr} setup's \acrshort{mtp} time. This will give insight about the effectiveness of a prototype and where the bottlenecks are.
 
 To obtain the needed knowledge to execute upon the presented approach, I plan to refer to Research Papers and Experts. There is a multitude of research papers for individual parts of the prototype (Networking, Latency Reduction, Encryption, Encoding, etc.) that contain concentrated knowledge. To assert which information are useful when applied to the research problem and to discover potential pitfalls, I plan on talking to experts that have real world expertise in developing similar products. I want to source experts from inside the \acrfull{irh} and outside of it in order to maximise my chances of picking the right information/technology. 
 
@@ -84,4 +84,6 @@ To be handed in at the end of week 16: November 2020 23:59
 
 \newpage
 \printbibliography
+
+\include{Appendices}
 \end{document}
