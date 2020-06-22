@@ -7,7 +7,7 @@ In this section different technology stacks will be presented, all of which meet
 \begin{figure}[h!]
 \caption{Overview of NVIDIA CloudXR Prototype \parencite{cloudxr}}
 \label{fig:pr0}
-\includegraphics[scale=0.4]{nvidia-cloudxr-diagram}
+\includegraphics[scale=0.45]{nvidia-cloudxr-diagram}
 \end{figure}
 
 The CloudXR SDK from NVIDIA offers a complete solution package to stream VR/AR experiences from server to client. As the only complete package in this list it is a good starting point to create a cloud \acrshort{vr} streaming prototype. Since Azure is the chosen cloud provider of Thales, one of the major stakeholders, the idea would be to deploy this tech stack there. \\
@@ -34,7 +34,9 @@ The CloudXR SDK from NVIDIA offers a complete solution package to stream VR/AR e
 \end{itemize}
 \end{varwidth}
 
-\subsubsection{WebRTC + Server-side OpenVR + Client-side WebXR}
+\newpage
+
+\subsubsection{WebRTC Prototype 1}
 \begin{figure}[h!]
 \caption{Overview of WebRTC Prototype 1}
 \label{fig:pr11}
@@ -47,10 +49,9 @@ WebRTC is one of the premier web technologies to enable real time communications
 \renewcommand\labelitemi{+}
 \textbf{Pros:}
 \begin{itemize}
-\item Open source
-\item Mature technology
-\item Well documented and supported
-\item Platform independent
+\item Works for the majority of \acrshort{hmd}'s + platforms
+\item Mostly Open source
+\item WebRTC is well documented and supported
 \end{itemize}
 \end{varwidth}
 \hspace{4em}
@@ -58,26 +59,26 @@ WebRTC is one of the premier web technologies to enable real time communications
 \renewcommand\labelitemi{-}
 \textbf{Cons:}
 \begin{itemize}
-\item WebRTC is a generalized solution (it will take more work to optimize it for \acrshort{vr})
 \item Lower performance Web Technologies (but there are native clients for all major platforms available)
-\item Higher complexity (might run out of time while trying to create the prototype)
+\item Higher complexity due to more components
+\item OpenVR + WebXR are sparsely documented
 \end{itemize}
 \end{varwidth}
 
-\subsubsection{WebRTC + Client-side OpenVR}
+\subsubsection{WebRTC Prototype 2}
 \begin{figure}[h!]
 \caption{Overview of WebRTC Prototype 2}
 \label{fig:pr12}
 \includegraphics[scale=0.5]{CloudVR_PR1_2}
 \end{figure}
 
-This protoype candidate is similar in design to the previous one, in that it uses WebRTC for networking and OpenVR for interacting with a \acrshort{hmd}. The key difference is that the application on the server does not know it is rendering specifically for VR. All the distortion operations to generate an image for the \acrshort{hmd} from the recieved frame will be done on the client-side.
+This protoype candidate is similar in design to the previous one, in the sense that it uses WebRTC for networking and OpenVR for interacting with a \acrshort{hmd}. The key difference is that the application on the server does not know it is rendering specifically for VR. All the distortion operations, to generate an image for the \acrshort{hmd} from the recieved frame, will be done on the client-side with OpenVR. \\
 \newline
 \begin{varwidth}[t]{.5\textwidth}
 \renewcommand\labelitemi{+}
 \textbf{Pros:}
 \begin{itemize}
-\item Less complex than previous solution
+\item Less complex than previous solution due to less components 
 \item Utilizes OpenVR to gain access to HMD's: The type/manufacturer does not matter
 \end{itemize}
 \end{varwidth}
@@ -86,6 +87,6 @@ This protoype candidate is similar in design to the previous one, in that it use
 \renewcommand\labelitemi{-}
 \textbf{Cons:}
 \begin{itemize}
-\item VR Application does not know it renders for VR
+\item Will only work in a very specific set up
 \end{itemize}
 \end{varwidth}
