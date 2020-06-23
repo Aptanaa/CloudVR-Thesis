@@ -1,6 +1,5 @@
 \section{Theoretical Framework}
-In order to thoroughly understand the aim and subject of the report, it is important to explore different existing solutions and literature. Therefore, the subjects that will be discussed in the following theoretical framework are Cloud Streaming/Cloud Computing, Virtual Reality and Security in a streaming context. Within this theoretical framework definitions of the subjects will be given, as well as current insights into these subjects. The topics reflect knowledge needed to understand the problem space. Together all of the topics make up the 360 scan. Then this knowledge will be applied to the research problem by creating an overview of the individual parts of a cloud \acrshort{vr} system and of the available components to create one. Lastly I will be proposing technology stacks, made up of said components, that can satisfy all necessary aspects of a cloud \acrshort{vr} system as described in the overview.
-
+In order to thoroughly understand the aim and subject of the report, it is important to explore different existing solutions and literature. Therefore, the subjects that will be discussed in the following theoretical framework are Cloud Streaming/Cloud Computing, Virtual Reality and Security in a streaming context. Within this theoretical framework definitions of the subjects will be given, as well as current insights into these subjects. The topics reflect knowledge needed to understand the problem space. Together all of the topics make up the 360 scan. Then this knowledge will be applied to the research problem by creating an overview of the individual parts of a cloud \acrshort{vr} system and of the available components to create one. 
 \subsection{Cloud Streaming/Cloud Computing}
 
 \subsubsection{Definition}
@@ -111,55 +110,3 @@ WebRTC & With WebRTC, you can add real-time communication capabilities to your a
 WebXR & The WebXR Device API provides the interfaces necessary to enable developers to build compelling, comfortable, and safe immersive applications on the web across a wide variety of hardware form factors. & \textSR , \textCRD \\
 \hline
 \end{longtable}
-
-\subsection{Proposed Technology Stacks}
-Finally in this section different technology stacks will be presented, all of which meet the requirements as detailed in the previous section.
-\subsubsection{NVIDIA CloudXR (+ NVIDIA Quadro on Azure)}
-The CloudXR SDK from NVIDIA offers a complete solution package to stream VR/AR experiences from server to client. As the only complete package in this list it is a good starting point to create a cloud \acrshort{vr} streaming prototype. Since Azure is the chosen cloud provider of Thales, one of the major stakeholders, the idea would be to deploy this tech stack there. \\
-\newline
-\begin{varwidth}[t]{.5\textwidth}
-\renewcommand\labelitemi{+}
-\textbf{Pros:}
-\begin{itemize}
-\item Only complete solution
-\item Increased prototyping speed
-\item Custom made for streaming \acrshort{vr} content
-\item Works with cutting-edge \acrshort{gpu}'s
-\end{itemize}
-\end{varwidth}
-\hspace{4em}
-\begin{varwidth}[t]{.5\textwidth}
-\renewcommand\labelitemi{-}
-\textbf{Cons:}
-\begin{itemize}
-\item Forced to use NVIDIA products
-\item Not guaranteed to get access to solution (Have to apply to NVIDIA)
-\item Limited control about the solution
-\item Limited documentation about the solution, since it is brand new
-\end{itemize}
-\end{varwidth}
-
-\subsubsection{WebRTC + WebXR + High Performance Video Codec}
-WebRTC is one of the premier web technologies to enable real time communications. Since it allows for streaming video and generic data it is a good candidate to create a cloud \acrshort{vr} streaming prototype, because it can transfer both the video and input data. As it has a focus on real time communication it is optimized to reduce latency by default, however it is unclear if this is enough optimization by itself to support streaming \acrshort{vr} content. To enable the application to run "normally" WebXR will be used to provide an interface of the physical hardware on the removed remote server. \\
-\newline
-\begin{varwidth}[t]{.5\textwidth}
-\renewcommand\labelitemi{+}
-\textbf{Pros:}
-\begin{itemize}
-\item Open source
-\item Mature technology
-\item Well documented and supported
-\item Platform independent
-\item WebRTC is developed by the same companies that offer cloud computing services (improved integration ?)
-\end{itemize}
-\end{varwidth}
-\hspace{4em}
-\begin{varwidth}[t]{.5\textwidth}
-\renewcommand\labelitemi{-}
-\textbf{Cons:}
-\begin{itemize}
-\item WebRTC is a generalized solution (it will take more work to optimize it for \acrshort{vr})
-\item Lower performance Web Technologies (but there are native clients for all major platforms available)
-\item Higher complexity (might run out of time while trying to create the prototype)
-\end{itemize}
-\end{varwidth}
