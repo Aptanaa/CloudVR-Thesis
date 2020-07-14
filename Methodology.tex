@@ -36,14 +36,13 @@ The CloudXR SDK from NVIDIA offers a complete solution to stream VR/AR experienc
 \end{itemize}
 \end{varwidth}
 
-\newpage
-
 \subsubsection{WebRTC Prototype 1}
 \begin{figure}[h!]
 \caption{Overview of WebRTC Prototype 1}
 \label{fig:pr11}
 \includegraphics[scale=0.5]{CloudVR_PR1_1}
 \end{figure}
+
 
 WebRTC is one of the premier web technologies to enable real time communications. Since it allows for streaming video and generic data it is a good candidate to create a cloud \acrshort{vr} streaming prototype, because it can transfer both the video and input data. As it has a focus on real time communication it is optimized to reduce latency by default, however it is unclear if this is enough optimization by itself to support streaming \acrshort{vr} content. To enable the application to run "normally" OpenVR will be used to provide a virtual interface of the physical hardware on the removed remote server. By receiving pose updates from the Client and using those updates to create a virtual \acrshort{hmd} the application can be developed like a local VR application. \\
 \newline
@@ -66,8 +65,6 @@ WebRTC is one of the premier web technologies to enable real time communications
 \item OpenVR + WebXR are sparsely documented
 \end{itemize}
 \end{varwidth}
-
-\newpage
 
 \subsubsection{WebRTC Prototype 2}
 \begin{figure}[h!]
