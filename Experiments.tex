@@ -36,3 +36,12 @@ I worked together with Thales and Microsoft Azure to gain access to a \acrfull{v
  \hline
 \end{tabular}
 \end{center}
+
+\subsection{Testing the prototype}
+Before starting to build the prototype, I had a meeting with Thales to discuss how to test it once it is running. Together we agreed on conducting 2 types of test with 2 different tools to measure the performance of the prototype.
+
+\subsubsection{Test 1: End-to-end Latency}
+The first test will be to measure the overall End-to-end latency of the system. This will be achived with a tool from NVIDIA, that is built to measure \acrshort{mtp} latency. Due to an NDA I cannot reveal any details about the device, but the embargo is expected to be lifted before the end of the project.
+
+\subsubsection{Test 2: Network Latency}
+The second test will measure the network latency, by comparing network packets travel time. This will be done with the open-source tool Wireshark \parencite{wireshark}. By comparing the resulting measurements with the first test, the impact of network latency on the whole system will be revealed.
