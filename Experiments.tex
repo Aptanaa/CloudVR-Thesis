@@ -13,32 +13,35 @@ When experimenting with the \hyperref[fig:pr11]{first} and \hyperref[fig:pr12]{s
 At the end of the exploratory research phase I finally got into contact with an NVIDIA employee who was able to grant me access to the CloudXR SDK. I was able to successfully set up the \hyperref[fig:pr0]{pipeline} in the local network of the XR lab within a couple of days. Some initial user testing from myself and volunteering teachers reveals that the latency in a local network is not-at-all/barely impacting the user experience.
 
 \subsection{Building the prototype}
-I worked together with Thales and Microsoft Azure to gain access to a \acrfull{vm} with the necessary hardware inside of Azure. After two days, due to a driver and licensing issue, I was able to set up the prototype on the aforementioned \acrshort{vm}. However the user experience was horrible, due to poor latency and \acrshort{fps}. Currently I am investigating this problem together with NVIDIA and Azure.
+I worked together with Thales and Microsoft Azure to gain access to a \acrfull{vm} with the necessary hardware inside of Azure. After two days, due to a driver and licensing issue, I was able to set up the prototype on the aforementioned \acrshort{vm}. However the user experience was horrible, due to poor latency and \acrshort{fps}. The root of this issue was a mismatch of (v)\acrshort{gpu} driver versions and \acrfull{os}'s. After installing compatible versions of v\acrshort{gpu} drivers and CloudXR, as well as an virtual audio driver, the prototype finally worked as intended.
 
+\begin{table}[h]	
 \begin{center}
 \begin{tabular}{ |c|c|c|c| } 
 \hline
 \multicolumn{2}{|c|}{Server Specifications} & \multicolumn{2}{|c|}{Client Specifications}\\ 
 \hline\hline
- \textbf{OS} & Windows 10 Pro &  \textbf{OS} & Windows 10 Pro\\ 
- \hline
- \textbf{GPU} & P100 & \textbf{GPU} & GeForce RTX 2080 Ti\\ 
- \hline
- \textbf{Driver} & 451.48 &  \textbf{Driver} & 432.00\\ 
- \hline
- \textbf{CPU} & Intel Xeon E5-2690 v9 & \textbf{CPU} & Intel I7-7820X\\
- \hline
- \textbf{Memory} & 112 GiB & \textbf{Memory} & 64 GiB\\
- \hline
- \textbf{Location} & Europe West & \textbf{\acrshort{hmd}} & Vive Pro\\
- \hline
- \textbf{Azure VM Series} & NC6s v2 & & \\
- \hline
+\textbf{\acrshort{os}} & Windows Server 2019  &  \textbf{\acrshort{os}} & Windows 10 Pro\\ 
+\hline
+\textbf{\acrshort{gpu}} & P100 & \textbf{\acrshort{gpu}} & GeForce RTX 2080 Ti\\ 
+\hline
+\textbf{Driver} & 451.48 &  \textbf{Driver} & 432.00\\ 
+\hline
+\textbf{\acrshort{cpu}} & Intel Xeon E5-2690 v9 & \textbf{\acrshort{cpu}} & Intel I7-7820X\\
+\hline
+\textbf{Memory} & 112 GiB & \textbf{Memory} & 64 GiB\\
+\hline
+\textbf{Location} & Europe West & \textbf{\acrshort{hmd}} & Vive Pro\\
+\hline
+\textbf{Azure VM Series} & NC6s v2 & & \\
+\hline
 \end{tabular}
 \end{center}
+\caption{Server and Client Specifications}
+\end{table}
 
 \subsection{Testing the prototype}
-Before starting to build the prototype, I had a meeting with Thales to discuss how to test it once it is running. Together we agreed on conducting 2 types of test with 2 different tools to measure the performance of the prototype.
+Before starting to build the prototype, I had a meeting with Thales to discuss how to test it once it is running. Together we agreed on conducting 2 types of test with 2 different tools to measure the performance of the prototype. The following chapter contains the results of these tests.
 
 \subsubsection{Test 1: End-to-end Latency}
 The first test will be to measure the overall End-to-end latency of the system. This will be achieved with a tool from NVIDIA, that is built to measure \acrshort{mtp} latency. Due to an NDA I cannot reveal any details about the device, but the embargo is expected to be lifted before the end of the project.
