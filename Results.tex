@@ -1,5 +1,4 @@
 \section{Results}
-Below are the test results gathered from the setup described in the previous section.
 
 \subsection{Test 1: End-to-End Latency}
 \begin{table}[h]
@@ -25,3 +24,22 @@ Initial measurements show that the \acrshort{mtp} latency of the Cloud \acrshort
 
 \subsection{Test 2: Network Latency}
 Testing with Wireshark \parencite{wireshark} revealed that the round trip delay for a single packet is \textbf{5-6 ms}. This is supported by data collected from the CXR \parencite{cloudxr} software, which measured similar results. 
+
+\subsection{Cloud XR Software statistics}
+\begin{table}[h]
+\begin{center}
+\caption{Cloud XR software statistics}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Frames Per Second & Frame Time in CXR (\acrshort{ms}) & Client Queue Time (\acrshort{ms}) & Average Video Rate (kbps)  \\ \hline
+90 & 21-22 & 5-9 & 20-30 \\ \hline
+\end{tabular}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Est. Avail. Bandwidth (kbps) & Bandwidth Utilization (\%) & Jitter (\acrshort{us}) & Round Trip Delay (\acrshort{ms}) \\ \hline
+300-500 & 3-4 & 17 & 5-6 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+These measurements were recorded from the Cloud XR software during a playtest with an example scene from Thales. The most interesting statistics is 'Frame Time in CXR' which is the time a single frame spends in the Cloud XR software, from rendering on the server to delivering it to the \acrshort{hmd} display. This value is only marginally higher than the 20\acrshort{ms} \acrshort{mtp} threshold that got explained in the \hyperref[sec:theo]{Theoretical Framework}. 
