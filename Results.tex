@@ -1,8 +1,10 @@
 \section{Results}
 Below are the test results gathered from the setup described in the previous section.
 
+\subsection{Test 1: End-to-End Latency}
 \begin{table}[h]
 \begin{center}
+\caption{End-to-End Latency (ms)}
 \begin{tabular}{ |c|c|c| }
 \hline
 \multicolumn{3}{|c|}{End-to-End Latency (ms)}\\
@@ -17,5 +19,9 @@ Local without VR & Local VR & Cloud VR\\
 \hline
 \end{tabular}
 \end{center}
-\caption{End-to-End Latency (ms)}
 \end{table}
+
+Initial measurements show that the \acrshort{mtp} latency of the Cloud \acrshort{vr} prototype is about 87.5\% higher than a normal application on a local machine and about 50\% higher than a \acrshort{vr} application on a local machine.
+
+\subsection{Test 2: Network Latency}
+Testing with Wireshark \parencite{wireshark} revealed that the round trip delay for a single packet is \textbf{5-6 ms}. This is supported by data collected from the CXR \parencite{cloudxr} software, which measured similar results. 
