@@ -1,32 +1,40 @@
 \section{Results}
 
-\subsection{Test 1: End-to-End Latency}
-\begin{table}[h]
+\subsection{Test 1: \acrfull{e2e} Latency}
+\label{sec:res:t1}
+\begin{table}[h!]
 \begin{center}
-\caption{End-to-End Latency (ms)}
+\caption{\acrfull{e2e} Latency (ms)}
 \begin{tabular}{ |c|c|c| }
 \hline
-\multicolumn{3}{|c|}{End-to-End Latency (ms)}\\
+\multicolumn{3}{|c|}{\acrfull{e2e} Latency (\acrshort{ms})}\\
 \hline
-Local without VR & Local VR & Cloud VR\\
+\hline
+Local without \acrshort{vr} & Local \acrshort{vr} & Cloud \acrshort{vr}\\
 \hline
 75-80 & 90-100 & 145-150\\
 \hline
 \multicolumn{3}{|c|}{Effective performance difference}\\
 \hline
-0 & +25\% & +87.5\%\\
+- & +25\% & +87.5\%\\
 \hline
 \end{tabular}
 \end{center}
 \end{table}
 
-Initial measurements show that the \acrshort{mtp} latency of the Cloud \acrshort{vr} prototype is about 87.5\% higher than a normal application on a local machine and about 50\% higher than a \acrshort{vr} application on a local machine.
+Initial measurements show that the \acrshort{e2e} latency of the Cloud \acrshort{vr} prototype is about \textbf{87.5\%} higher than a normal application on a local machine and about \textbf{50\%} higher than a \acrshort{vr} application on a local machine.
 
 \subsection{Test 2: Network Latency}
-Testing with Wireshark \parencite{wireshark} revealed that the round trip delay for a single packet is \textbf{5-6 ms}. This is supported by data collected from the CXR \parencite{cloudxr} software, which measured similar results. 
+\label{sec:res:t2}
+Testing with Wireshark \parencite{wireshark} revealed that the \acrfull{rtt} for a single packet is \textbf{5-6 ms}. Wireshark measures \acrshort{rtt} for a TCP connection as the latency between a data packet and the subsequent acknowledgment packet. This is supported by data collected from the CXR \parencite{cloudxr} software, which measured similar results. 
+
+Comparing this to the recorded \acrshort{e2e} latency and 'Frame Time in CXR' latency it is revealed that the network latency has an impact of \textbf{$\sim$3.3\%} on the \acrshort{e2e} latency and an impact of \textbf{$\sim$26\%} on the latency of a single frame.
+
+\newpage
 
 \subsection{Cloud XR Software statistics}
-\begin{table}[h]
+\label{sec:res:t3}
+\begin{table}[h!]
 \begin{center}
 \caption{Cloud XR software statistics}
 \begin{tabular}{|c|c|c|c|}
@@ -42,4 +50,4 @@ Est. Avail. Bandwidth (kbps) & Bandwidth Utilization (\%) & Jitter (\acrshort{us
 \end{center}
 \end{table}
 
-These measurements were recorded from the Cloud XR software during a playtest with an example scene from Thales. The most interesting statistics is 'Frame Time in CXR' which is the time a single frame spends in the Cloud XR software, from rendering on the server to delivering it to the \acrshort{hmd} display. This value is only marginally higher than the 20\acrshort{ms} \acrshort{mtp} threshold that got explained in the \hyperref[sec:theo]{Theoretical Framework}. 
+The following measurements were recorded from the Cloud XR software during a playtest with an example scene from Thales. The most interesting statistics is 'Frame Time in CXR' which is the time a single frame spends in the Cloud XR software. This measurement is taken from the moment the server receives the eye texture from the client, to the moment the eye texture leaves the Cloud XR library on the client. Additionally the 'Client Queue Time', which is the time decoded frames spend for de-jittering to account for network  jitter, and the round trip time are included in this measurement.
