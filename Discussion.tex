@@ -1,3 +1,13 @@
 \section{Discussion}
 
-Waiting for the conclusion of the tests.
+The circumstances that led to the inception of this project were that the stakeholders wanted to explore how to stream \acrshort{vr} content from the cloud in a fast and secure manner and how such a solution compares against a local \acrshort{vr} set up. The problem was that the clients did not know which technology stacks work in practice. The data from the finished prototype suggests that these requirements have been met.
+\\ \\
+When looking at the results of the \acrfull{e2e} latency tests, there are clear performance differences depending on the complexity of tested application and as suspected higher complexity correlates with higher latency. As observed the latency of the cloud prototype is about \hyperref[sec:res:t1]{50\%} higher than a local \acrshort{vr} application. This difference in performance was expected and as such is not surprising.
+\\ \\
+On the other hand a surprising fact was the low network delay and utilization. While setting up the prototype the requirements for bandwidth were \hyperref[sec:res:t4]{50-60 Mbps}, however only \hyperref[sec:res:t1]{$\sim$4\%} are utilized at runtime. It seems like the excessive bandwidth capacity is primarily used to facilitate the low \acrfull{rtt} of \hyperref[sec:res:t2]{$\sim$6\acrshort{ms}}. The low \acrshort{rtt} is especially important for the latency of individual frames, as it makes up \hyperref[sec:res:t1]{$\sim$One-Fourth} of the overall individual frame latency.
+\\ \\
+The individual frame latency itself is \hyperref[sec:res:t3]{$\sim$22\acrshort{ms}}, which is only marginally higher than the 20\acrshort{ms} \acrshort{mtp} threshold that got explained in the \hyperref[sec:theo]{Theoretical Framework}. This reflects the overall performance of the prototype best, as most users experienced a small but constant delay in the prototype when compared to a local \acrshort{vr} set up.
+\\ \\
+The prototype has been deployed in the dutch secure defense cloud powered by Microsoft Azure. As such most security concerns are taken care of by the cloud platform itself. However there is still ample room to make the system even more secure, for example with a \hyperref[sec:theo:iam]{\acrfull{iam}} solution.
+\\ \\
+Lastly it should be noted that these test results do not reflect the maximum performance possible, as due to time constrains the tests were conducted with non-optimized applications and hardware. Future researchers have the opportunity to optimize most parts of  the system such as the cloud server and the test application. The expectation is that the rations between the results stay the same, even as the system itself is sped up.
