@@ -22,8 +22,9 @@ Local without \acrshort{vr} & Local \acrshort{vr} & Cloud \acrshort{vr}\\
 \end{center}
 \end{table}
 
-Initial measurements show that the \acrshort{e2e} latency of the Cloud \acrshort{vr} prototype is about \textbf{87.5\%} higher than a normal application on a local machine and about \textbf{50\%} higher than a \acrshort{vr} application on a local machine.
-
+Initial measurements show that the \acrshort{e2e} latency of the Cloud \acrshort{vr} prototype is about \textbf{87.5\%} higher than a normal application on a local machine and about \textbf{50\%} higher than a \acrshort{vr} application on a local machine. As before, it is important to mention that the measurement from the Cloud \acrshort{vr}
+ prototype includes all the hardware and software latency of two machines, as well as the network latency between those. Furthermore \acrshort{vr} games are framelocked to match the display refresh rate of the \acrshort{hmd}. In the case of this test, the maximum \acrshort{fps} are 90, since the display of the \acrfull{hmd} (Vive Pro) has a refresh rate of 90\acrshort{hz}. This impacts the test negatively, as higher \acrfull{fps} or \acrfull{hz} would result in a lower \acrfull{e2e} latency. For example: An example test from NVIDIA runs Counter Strike Global Offensive on $>$500 \acrshort{fps}.
+ 
 \subsection{Test 2: Network Latency}
 \label{sec:res:t2}
 Testing with Wireshark \parencite{wireshark} revealed that the \acrfull{rtt} for a single packet is \textbf{5-6 ms}. Wireshark measures \acrshort{rtt} for a TCP connection as the latency between a data packet and the subsequent acknowledgment packet. This is supported by data collected from the CXR \parencite{cloudxr} software, which measured similar results. 
