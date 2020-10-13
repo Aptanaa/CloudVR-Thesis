@@ -1,0 +1,113 @@
+\documentclass[]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+
+%For References and quotes
+\usepackage[
+backend=biber,
+style=apa,
+citestyle=apa,
+sorting=nyt
+]{biblatex}
+\usepackage{csquotes}
+\usepackage{hyphenat}
+
+%For Links
+\usepackage{hyperref}
+
+%For Images
+\usepackage{graphicx}
+\graphicspath{ {../../images/} }
+
+%For Swot Analysis Matrixes
+\usepackage{times}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+
+\input{../../Glossary}
+\addbibresource{../../references.bib}
+
+
+\begin{document}
+
+\begin{titlepage}
+   \begin{center}
+       \vspace*{1cm}
+
+       \textbf{Reflection: 12 CMGT Competences}
+
+       \vspace{0.5cm}
+       Cloud VR. Secure, Fast and Distributed Virtual Reality Solutions.
+       \vspace{1.5cm}
+
+       \textbf{Leon Koster}
+
+       \vfill
+            
+       \vspace{0.8cm}
+     
+      \includegraphics[width=0.5\textwidth]{university}
+            
+       Academie Creative Technology (ACT)\\
+       Saxion University of Applied Sciences\\
+       Netherlands\\
+       May 2020
+            
+   \end{center}
+\end{titlepage}
+
+\tableofcontents
+\printnoidxglossary[type=\acronymtype]
+\newpage
+
+\section{Technical Competences}
+\subsection{Technical research and analysis}
+The goal of this project was to find a way to stream a \acrshort{vr}  application from a secure cloud serve to a client \acrshort{hmd}. I researched different prototype desings that had the potential to fulfill said requirements. Over the course of the research it became clear that I would only be able to finish a product when using the NVIDIA solution. The other prototype desings required a lot more work to make them usable, which I did not have in the time frame of the project. 
+
+\subsection{Designing, prototyping and realizing}
+Given the team size (only me) and the complexity of the assignment it was clear that I could only focus on the core requirements if I wanted to be able to deliver a usable product. As such I concentrated my effort on providing a solution that fulfilled the given requirements: Low Latency and High Security. The delivered prototype renders in a safe Azure cloud and has only marginally higher frame latency than a local \acrshort{vr} application. Given additional time I would have looked to make improvement in the user experience, since most steps involving starting the solution are currently manual tasks.
+
+\subsection{Testing and rolling out}
+Due to the hit or miss nature of \acrshort{vr} streaming, iterative testing was not an option. I began testing as soon as I finished the first version of the working prototype, mainly with other people in the XR Lab. This means that testing started rather late in the project , but it made no sense to begin earlier as I did not have a product to test. However the prototype is deployed in the client's desired cloud environment (Microsoft Azure).
+
+\section{Designing Competences}
+\subsection{Investigating and analysing}
+In the beginning of the research I had to define a measurable way to record the performance of the prototype. Through extensive research of existing technologies and research papers I was able to single out \acrfull{mtp} latency as the most important measurement. 
+
+\subsection{Conceptualizing}
+\label{sec:conc}
+Based on the results from the previous competence I worked together with my client, Thales, to identify the necessary performance the prototype has to have to be useful. We also made a distinction between must-have and optional features, that the prototype might have. Overall the goal of the project was quite clear from the beginning, so there was not much iteration on the project definition.
+
+\subsection{Designing}
+During the research phase I developed three prototype designs that had the potential to fulfull the clients needs. These concepts can be found in the Methodology section of my report and are augmented by visuals that are depicting the individual elements and overall flow of information in the design.
+
+\section{Organizational Competences}
+\subsection{Enterprising Attitude}
+The project has great potential to transform the \acrshort{vr} space. Cloud based \acrshort{vr} has a couple of distinct advantages compared to local \acrshort{vr}:
+\begin{itemize}
+  \item Since only the output video stream gets send to the client, all business data that might be included in the project remain in the safe cloud. This is very important if the project contains sensitive data, such as production \acrshort{cad} models.
+  \item Being hosted in the cloud, \acrshort{vr} can be sold as a pay-per-use model. This lowers costs for both the provider, as they don't have to ship complete \acrshort{vr} set-ups to locations anymore, and the customer, as they would only have to pay what they use and not for a complete \acrshort{vr} set-up that they might not even need.
+\end{itemize}
+
+\subsection{Enterprising Skills}
+Throughout the project I had regular meetings with my supervisor and my client to ensure that the project is still going in the right direction. Since I work independently, apart from the aforementioned meetings, I made all project resources available to the stake holders online. This way I reduced feedback loops, since they do not have to wait for my answer in most cases.
+
+\subsection{Working in a project-based way}
+As I was the sole member of this project I did not have the chance to collaborate with others. Due to this I made sure that I could still deliver a useable product at the end of the project, by prioritizing the core features the product has to have. These priorities got defined in conjunction with the stakeholders, as explained in the \hyperref[sec:conc]{conceptualizing section}.
+
+\subsection{Communication}
+As mentioned before I had regular meetings with both the external and internal stakeholders to discuss the state and direction of the project. Meetings were always held via Microsoft Teams, to ensure that there are no missunderstandings. Lower priority communication ususally utilized E-Mail.
+
+\section{Professional Competences}
+\subsection{Learning ability and reflectivity}
+Since the topic of the project is a cutting-edge technology, I had to learn a lot about how to combine networking with \acrshort{vr} rendering. I was also very lucky to work together with talented people from Microsoft Azure, NVIDIA and Thales, all of which helped me to boost my knowledge about programming and enterprising. 
+
+\subsection{Responsibility}
+My client Thales wants to use the results of this project to improve the \acrshort{vr} offerings of their company. Due to that I made sure that the finished product is as close to a useable service as possible. This is reflected for example in my choice to use Microsoft Azure as the cloud provider for this project, instead of for example Amazon Web Services which I have more experience with. This desicion was made due to Thales explicitly requesting me to use Microsoft Azure because it is their cloud provider of choice.
+
+\printbibliography
+
+
+\end{document}
