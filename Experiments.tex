@@ -12,10 +12,10 @@ When experimenting with the \hyperref[fig:pr11]{first} and \hyperref[fig:pr12]{s
 \subsubsection{Deciding on a technology stack}
 Due to the points outlaid in the previous section, I made the desicion to choose NVIDIA CloudXR as the underlying technology for the prototype. At the end of the exploratory research phase I also finally got into contact with an NVIDIA employee who was able to grant me access to the CloudXR SDK.
 
-\subsection{Building the prototype}
+\subsection{Implementation}
 I was able to successfully set up the \hyperref[fig:pr0]{pipeline} in the local network of the XR lab within a couple of days. Some initial user testing from myself and volunteering teachers revealed that the solution was potent, as most testers experienced no or only minor degradations in their user experience
 
-I then worked together with Thales and Microsoft Azure to gain access to a \acrfull{vm} with the necessary hardware inside of Azure. After two days, due to a driver and licensing issue, I was able to set up the prototype on the aforementioned \acrshort{vm}. However the user experience was horrible, due to poor latency and \acrshort{fps}. The root of this issue was a mismatch of (v)\acrshort{gpu} driver versions and \acrfull{os}'s. After installing compatible versions of v\acrshort{gpu} drivers and CloudXR, as well as an virtual audio driver, the prototype finally worked as intended.
+I then worked together with Thales and Microsoft Azure to gain access to a \acrfull{vm} with the necessary hardware inside of Azure. After two days, due to a driver and licensing issue, I was able to set up the prototype on the aforementioned \acrshort{vm}. However the user experience was horrible, due to poor latency and \acrshort{fps}. The root of this issue was a mismatch of (v)\acrshort{gpu} driver versions and \acrfull{os}'s. After installing compatible versions of v\acrshort{gpu} drivers and CloudXR, as well as an virtual audio driver, the prototype finally worked as intended. The final system specifications of the server and client machine are as follows:
 
 \begin{table}[h]	
 \begin{center}
