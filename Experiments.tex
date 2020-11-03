@@ -10,10 +10,10 @@ During the research a couple of existing products were found, that demonstrated 
 When experimenting with the \hyperref[fig:pr11]{first} and \hyperref[fig:pr12]{second} prototype design, both in Unreal Engine 4 and Unity 3D, it was possible to quickly create a WebRTC connection from a 'server' machine to a 'client' machine in the same network. However before I ever got to implementing the whole application loop it was already evident that the performance would be a critical factor. As explored in the \nameref{sec:theo} the \acrfull{mtp} latency for a single frame is not allowed exceed 20\acrshort{ms}, where as the base latency of the connection in the prototypes would be atleast around 100-200\acrshort{ms}. This measurement was taken in a local network instead of a connection to a cloud server and without streaming the significantly bigger \acrshort{vr} resolution of 2160x1200, all of which things that would have impacted the latency negatively even more. Considering this it would be impossible to create and optimize a prototype to undercut the \acrshort{mtp} barrier within the remaining time frame of the project. Additionally there was a serious lack of documentation and examples for SteamVR/OpenVR, the most critical component in the proposed custom designs. Lastly it also became clear that alternative solutions, like ReactVR \parencite{reactVR} and A-Frame \parencite{aframe}, are not suitable for the use-cases of the stakeholders as they do not allow for the complexity needed as presented in the \nameref{sec:int}.
 
 \subsubsection{Deciding on a technology stack}
-Due to the points outlaid in the previous section, I made the desicion to choose NVIDIA CloudXR as the underlying technology for the prototype. At the end of the exploratory research phase I also finally got into contact with an NVIDIA employee who was able to grant me access to the CloudXR SDK.
+Due to the points outlaid in the previous section, I made the decision to choose NVIDIA CloudXR as the underlying technology for the prototype. At the end of the exploratory research phase I also finally got into contact with an NVIDIA employee who was able to grant me access to the CloudXR SDK.
 
 \subsection{Implementation}
-I was able to successfully set up the \hyperref[fig:pr0]{pipeline} in the local network of the XR lab within a couple of days. Some initial user testing from myself and volunteering teachers revealed that the solution was potent, as most testers experienced no or only minor degradations in their user experience
+I was able to successfully set up the \hyperref[fig:pr0]{pipeline} in the local network of the XR lab within a couple of days. Some initial user testing from myself and volunteering teachers revealed that the solution was potent, as most testers experienced no or only minor degradation's in their user experience
 
 I then worked together with Thales and Microsoft Azure to gain access to a \acrfull{vm} with the necessary hardware inside of Azure. After two days, due to a driver and licensing issue, I was able to set up the prototype on the aforementioned \acrshort{vm}. However the user experience was horrible, due to poor latency and \acrshort{fps}. The root of this issue was a mismatch of (v)\acrshort{gpu} driver versions and \acrfull{os}'s. After installing compatible versions of v\acrshort{gpu} drivers and CloudXR, as well as an virtual audio driver, the prototype finally worked as intended. The final system specifications of the server and client machine are as follows:
 
@@ -34,7 +34,7 @@ I then worked together with Thales and Microsoft Azure to gain access to a \acrf
 \hline
 \textbf{Memory} & 112 GiB & \textbf{Memory} & 64 GiB\\
 \hline
-\textbf{Location} & Europe West & \textbf{\acrshort{hmd}} & Vive Pro\\
+\textbf{Location} & Europe West (Amsterdam) & \textbf{\acrshort{hmd}} & Vive Pro\\
 \hline
 \textbf{Azure VM Series} & NC6s v2 & & \\
 \hline
